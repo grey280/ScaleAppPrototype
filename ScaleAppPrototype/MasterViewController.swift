@@ -7,15 +7,51 @@
 //
 
 import UIKit
+import BLTNBoard
 
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var objects = [Any]()
+    
+    lazy var bulletinManager: BLTNItemManager = {
+        let rootItem = BLTNPageItem(title: "New Weight")
+        rootItem.descriptionText = "156.02 pounds\n8.6% body fat"
+        rootItem.actionButtonTitle = "Save"
+        rootItem.alternativeButtonTitle = "Don't Save"
+        let color = UIColor.init(named: "Yellow-Center")!
+        rootItem.appearance.actionButtonColor = color
+        rootItem.appearance.titleTextColor = color
+        rootItem.appearance.alternativeButtonTitleColor = color
+        rootItem.actionHandler = { (item: BLTNActionItem) in
+            item.manager?.dismissBulletin(animated: true)
+        }
+        rootItem.alternativeHandler = { (item: BLTNActionItem) in
+            item.manager?.dismissBulletin(animated: true)
+        }
+        return BLTNItemManager(rootItem: rootItem)
+    }()
+
+    
+    // https://stackoverflow.com/questions/33503531/detect-shake-gesture-ios-swift
+    // We are willing to become first responder to get shake motion
+    override var canBecomeFirstResponder: Bool {
+        get {
+            return true
+        }
+    }
+    
+    // Enable detection of shake motion
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            bulletinManager.showBulletin(above: self)
+        }
+    }
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.becomeFirstResponder()
         // Do any additional setup after loading the view.
 //        navigationItem.leftBarButtonItem = editButtonItem
 
