@@ -13,6 +13,7 @@
 		2DFE307C224F1A0D00BE38AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DFE307A224F1A0D00BE38AC /* Main.storyboard */; };
 		2DFE307E224F1A0E00BE38AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DFE307D224F1A0E00BE38AC /* Assets.xcassets */; };
 		2DFE3081224F1A0E00BE38AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DFE307F224F1A0E00BE38AC /* LaunchScreen.storyboard */; };
+		2DFE308B224FDE5500BE38AC /* BLTNBoard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DFE308A224FDE5500BE38AC /* BLTNBoard.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2DFE307D224F1A0E00BE38AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DFE3080224F1A0E00BE38AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DFE3082224F1A0E00BE38AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DFE308A224FDE5500BE38AC /* BLTNBoard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BLTNBoard.framework; path = Carthage/Build/iOS/BLTNBoard.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DFE308B224FDE5500BE38AC /* BLTNBoard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +45,7 @@
 			children = (
 				2DFE3073224F1A0D00BE38AC /* ScaleAppPrototype */,
 				2DFE3072224F1A0D00BE38AC /* Products */,
+				2DFE3089224FDE5500BE38AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +71,14 @@
 			path = ScaleAppPrototype;
 			sourceTree = "<group>";
 		};
+		2DFE3089224FDE5500BE38AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2DFE308A224FDE5500BE38AC /* BLTNBoard.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +89,7 @@
 				2DFE306D224F1A0D00BE38AC /* Sources */,
 				2DFE306E224F1A0D00BE38AC /* Frameworks */,
 				2DFE306F224F1A0D00BE38AC /* Resources */,
+				2DFE3088224FDE2600BE38AC /* Carthage Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +145,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2DFE3088224FDE2600BE38AC /* Carthage Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/BLTNBoard.framework",
+			);
+			name = "Carthage Copy Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BLTNBoard.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2DFE306D224F1A0D00BE38AC /* Sources */ = {
@@ -288,6 +324,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W6KVFT267T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ScaleAppPrototype/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -306,6 +346,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W6KVFT267T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ScaleAppPrototype/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
