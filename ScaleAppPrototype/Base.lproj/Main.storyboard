@@ -35,34 +35,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WeightGraph" translatesAutoresizingMaskIntoConstraints="NO" id="qzv-Gk-ETL">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WeightGraph" translatesAutoresizingMaskIntoConstraints="NO" id="qzv-Gk-ETL">
                                 <rect key="frame" x="-12" y="119" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Lav-de-gx5"/>
+                                    <constraint firstAttribute="width" secondItem="qzv-Gk-ETL" secondAttribute="height" multiplier="15:8" id="YBn-CJ-ztC"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="155.65 lbs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9C-Jp-fWB">
-                                <rect key="frame" x="236" y="152" width="139" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="155.65 lbs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9C-Jp-fWB">
+                                <rect key="frame" x="236" y="152" width="170" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" name="Yellow-Dark"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8.6% fat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ml7-0x-y6B">
-                                <rect key="frame" x="236" y="196" width="94" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.6% fat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ml7-0x-y6B">
+                                <rect key="frame" x="236" y="196" width="170" height="32"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" name="Yellow-Center"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Healthy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9u-gL-X8L">
-                                <rect key="frame" x="20" y="263" width="161" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Healthy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9u-gL-X8L">
+                                <rect key="frame" x="20" y="263" width="374" height="55"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="46"/>
                                 <color key="textColor" name="Green"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUT-1A-OCE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUT-1A-OCE">
                                 <rect key="frame" x="20" y="326" width="374" height="127"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">This weight is in the healthy range for a man your age.
 Your body fat is a bit low; make sure to eat plenty of healthy fats - avocado, fish, nuts, eggs.</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
@@ -71,6 +70,22 @@ Your body fat is a bit low; make sure to eat plenty of healthy fats - avocado, f
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ml7-0x-y6B" firstAttribute="top" secondItem="K9C-Jp-fWB" secondAttribute="bottom" constant="8" id="0ck-Wh-9co"/>
+                            <constraint firstItem="qzv-Gk-ETL" firstAttribute="top" secondItem="VUw-jc-0yf" secondAttribute="top" constant="31" id="2AJ-DH-MUJ"/>
+                            <constraint firstItem="Ml7-0x-y6B" firstAttribute="width" secondItem="K9C-Jp-fWB" secondAttribute="width" id="2m4-hg-GeD"/>
+                            <constraint firstItem="dUT-1A-OCE" firstAttribute="top" secondItem="D9u-gL-X8L" secondAttribute="bottom" constant="8" id="6KB-Uh-B6T"/>
+                            <constraint firstItem="VUw-jc-0yf" firstAttribute="leading" secondItem="qzv-Gk-ETL" secondAttribute="leading" constant="12" id="7hd-yX-o1t"/>
+                            <constraint firstItem="K9C-Jp-fWB" firstAttribute="leading" secondItem="qzv-Gk-ETL" secondAttribute="trailing" constant="8" id="F3c-8e-x8q"/>
+                            <constraint firstItem="dUT-1A-OCE" firstAttribute="trailing" secondItem="D9u-gL-X8L" secondAttribute="trailing" id="II1-bh-EG2"/>
+                            <constraint firstItem="K9C-Jp-fWB" firstAttribute="top" secondItem="VUw-jc-0yf" secondAttribute="top" constant="64" id="J37-jU-FJJ"/>
+                            <constraint firstItem="dUT-1A-OCE" firstAttribute="leading" secondItem="D9u-gL-X8L" secondAttribute="leading" id="JRZ-Qa-DT3"/>
+                            <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="K9C-Jp-fWB" secondAttribute="trailing" constant="8" id="aGw-9E-VEy"/>
+                            <constraint firstItem="D9u-gL-X8L" firstAttribute="top" secondItem="qzv-Gk-ETL" secondAttribute="bottom" constant="16" id="azK-f6-7lu"/>
+                            <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="D9u-gL-X8L" secondAttribute="trailing" constant="20" id="eQb-m3-Sc2"/>
+                            <constraint firstItem="Ml7-0x-y6B" firstAttribute="leading" secondItem="qzv-Gk-ETL" secondAttribute="trailing" constant="8" id="xgn-2h-lJy"/>
+                            <constraint firstItem="D9u-gL-X8L" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="20" id="yA0-EE-rC6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VUw-jc-0yf"/>
                     </view>
                     <toolbarItems/>
