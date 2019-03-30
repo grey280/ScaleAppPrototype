@@ -35,56 +35,131 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WeightGraph" translatesAutoresizingMaskIntoConstraints="NO" id="qzv-Gk-ETL">
-                                <rect key="frame" x="-12" y="95" width="225" height="120"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="qzv-Gk-ETL" secondAttribute="height" multiplier="15:8" id="YBn-CJ-ztC"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="155.65 lbs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9C-Jp-fWB">
-                                <rect key="frame" x="221" y="117" width="146" height="36"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <color key="textColor" name="Yellow-Dark"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.6% fat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ml7-0x-y6B">
-                                <rect key="frame" x="221" y="161" width="146" height="32"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <color key="textColor" name="Yellow-Center"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Healthy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9u-gL-X8L">
-                                <rect key="frame" x="20" y="231" width="335" height="55"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="46"/>
-                                <color key="textColor" name="Green"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUT-1A-OCE">
-                                <rect key="frame" x="20" y="294" width="335" height="124"/>
-                                <string key="text">This weight is in the healthy range for a man your age.
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iaT-HW-pGn">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6r-uc-GrH">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WeightGraph" translatesAutoresizingMaskIntoConstraints="NO" id="qzv-Gk-ETL">
+                                                <rect key="frame" x="-10" y="30" width="206.5" height="110"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="qzv-Gk-ETL" secondAttribute="height" multiplier="15:8" id="YBn-CJ-ztC"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="155.65 lbs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9C-Jp-fWB">
+                                                <rect key="frame" x="202.5" y="52" width="164.5" height="36"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                <color key="textColor" name="Yellow-Dark"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metabolism" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x90-NH-ana">
+                                                <rect key="frame" x="20" y="359" width="335" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdp-2U-Jgs">
+                                                <rect key="frame" x="20" y="409" width="335" height="142.5"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Your basal metabolic rate is about ">
+                                                        <attributes>
+                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="1,900 calories">
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name="SFCompactDisplay-Semibold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content"> per day.
+This doesn't include calories you burn from exercising, or just moving around throughout the day, so to maintain your weight, you should eat around </string>
+                                                        <attributes>
+                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="2,500 calories">
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name="SFCompactDisplay-Semibold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" per day.">
+                                                        <attributes>
+                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Healthy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9u-gL-X8L">
+                                                <rect key="frame" x="20" y="156" width="335" height="55"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="46"/>
+                                                <color key="textColor" name="Green"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.6% fat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ml7-0x-y6B">
+                                                <rect key="frame" x="202.5" y="94" width="164.5" height="32"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="textColor" name="Yellow-Center"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUT-1A-OCE">
+                                                <rect key="frame" x="20" y="219" width="335" height="124"/>
+                                                <string key="text">This weight is in the healthy range for a man your age.
 Your body fat is a bit low; make sure to eat plenty of healthy fats - avocado, fish, nuts, eggs.</string>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="dUT-1A-OCE" firstAttribute="top" secondItem="D9u-gL-X8L" secondAttribute="bottom" constant="8" id="54W-Zw-peW"/>
+                                            <constraint firstAttribute="trailing" secondItem="K9C-Jp-fWB" secondAttribute="trailing" constant="8" id="6yD-WP-hYb"/>
+                                            <constraint firstItem="K9C-Jp-fWB" firstAttribute="leading" secondItem="qzv-Gk-ETL" secondAttribute="trailing" constant="6" id="8YR-Yd-jdq"/>
+                                            <constraint firstAttribute="trailing" secondItem="D9u-gL-X8L" secondAttribute="trailing" constant="20" id="8zh-mw-C5H"/>
+                                            <constraint firstItem="D9u-gL-X8L" firstAttribute="top" secondItem="qzv-Gk-ETL" secondAttribute="bottom" constant="16" id="B2l-w5-SZ0"/>
+                                            <constraint firstItem="vdp-2U-Jgs" firstAttribute="leading" secondItem="x90-NH-ana" secondAttribute="leading" id="CkU-NN-XM0"/>
+                                            <constraint firstItem="K9C-Jp-fWB" firstAttribute="top" secondItem="qzv-Gk-ETL" secondAttribute="top" constant="22" id="I8S-dF-OTu"/>
+                                            <constraint firstItem="x90-NH-ana" firstAttribute="top" secondItem="dUT-1A-OCE" secondAttribute="bottom" constant="16" id="PAI-fJ-rM6"/>
+                                            <constraint firstItem="D9u-gL-X8L" firstAttribute="leading" secondItem="N6r-uc-GrH" secondAttribute="leading" constant="20" id="YKv-9x-lVb"/>
+                                            <constraint firstItem="qzv-Gk-ETL" firstAttribute="top" secondItem="N6r-uc-GrH" secondAttribute="top" constant="30" id="YLd-8D-sU0"/>
+                                            <constraint firstItem="vdp-2U-Jgs" firstAttribute="top" secondItem="x90-NH-ana" secondAttribute="bottom" constant="8" id="aMY-q9-EBq"/>
+                                            <constraint firstItem="qzv-Gk-ETL" firstAttribute="leading" secondItem="N6r-uc-GrH" secondAttribute="leading" constant="-10" id="cKK-5b-LhF"/>
+                                            <constraint firstItem="Ml7-0x-y6B" firstAttribute="top" secondItem="K9C-Jp-fWB" secondAttribute="bottom" constant="6" id="dTg-KC-oaO"/>
+                                            <constraint firstItem="x90-NH-ana" firstAttribute="leading" secondItem="dUT-1A-OCE" secondAttribute="leading" id="fJY-Oq-yMv"/>
+                                            <constraint firstItem="Ml7-0x-y6B" firstAttribute="leading" secondItem="K9C-Jp-fWB" secondAttribute="leading" id="fKf-vP-vMd"/>
+                                            <constraint firstItem="dUT-1A-OCE" firstAttribute="leading" secondItem="D9u-gL-X8L" secondAttribute="leading" id="h8i-er-MOz"/>
+                                            <constraint firstItem="vdp-2U-Jgs" firstAttribute="trailing" secondItem="x90-NH-ana" secondAttribute="trailing" id="hy5-Wg-Zz2"/>
+                                            <constraint firstItem="dUT-1A-OCE" firstAttribute="trailing" secondItem="D9u-gL-X8L" secondAttribute="trailing" id="iYy-vO-q9E"/>
+                                            <constraint firstItem="x90-NH-ana" firstAttribute="trailing" secondItem="dUT-1A-OCE" secondAttribute="trailing" id="xn6-SK-ypO"/>
+                                            <constraint firstItem="Ml7-0x-y6B" firstAttribute="trailing" secondItem="K9C-Jp-fWB" secondAttribute="trailing" id="zVK-uj-d3F"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="N6r-uc-GrH" secondAttribute="trailing" id="CIT-JU-lrQ"/>
+                                    <constraint firstItem="N6r-uc-GrH" firstAttribute="height" secondItem="iaT-HW-pGn" secondAttribute="height" priority="250" id="Cty-ll-8yZ"/>
+                                    <constraint firstItem="N6r-uc-GrH" firstAttribute="leading" secondItem="iaT-HW-pGn" secondAttribute="leading" id="G6Z-5M-csS"/>
+                                    <constraint firstItem="N6r-uc-GrH" firstAttribute="width" secondItem="iaT-HW-pGn" secondAttribute="width" id="UU9-aG-tfb"/>
+                                    <constraint firstItem="N6r-uc-GrH" firstAttribute="top" secondItem="iaT-HW-pGn" secondAttribute="top" id="bpi-9F-pc2"/>
+                                    <constraint firstAttribute="bottom" secondItem="N6r-uc-GrH" secondAttribute="bottom" id="d5f-qY-INq"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Ml7-0x-y6B" firstAttribute="top" secondItem="K9C-Jp-fWB" secondAttribute="bottom" constant="8" id="0ck-Wh-9co"/>
-                            <constraint firstItem="qzv-Gk-ETL" firstAttribute="top" secondItem="VUw-jc-0yf" secondAttribute="top" constant="31" id="2AJ-DH-MUJ"/>
-                            <constraint firstItem="Ml7-0x-y6B" firstAttribute="width" secondItem="K9C-Jp-fWB" secondAttribute="width" id="2m4-hg-GeD"/>
-                            <constraint firstItem="dUT-1A-OCE" firstAttribute="top" secondItem="D9u-gL-X8L" secondAttribute="bottom" constant="8" id="6KB-Uh-B6T"/>
-                            <constraint firstItem="VUw-jc-0yf" firstAttribute="leading" secondItem="qzv-Gk-ETL" secondAttribute="leading" constant="12" id="7hd-yX-o1t"/>
-                            <constraint firstItem="K9C-Jp-fWB" firstAttribute="leading" secondItem="qzv-Gk-ETL" secondAttribute="trailing" constant="8" id="F3c-8e-x8q"/>
-                            <constraint firstItem="K9C-Jp-fWB" firstAttribute="top" secondItem="qzv-Gk-ETL" secondAttribute="top" constant="22" id="HRI-V2-wfN"/>
-                            <constraint firstItem="dUT-1A-OCE" firstAttribute="trailing" secondItem="D9u-gL-X8L" secondAttribute="trailing" id="II1-bh-EG2"/>
-                            <constraint firstItem="dUT-1A-OCE" firstAttribute="leading" secondItem="D9u-gL-X8L" secondAttribute="leading" id="JRZ-Qa-DT3"/>
-                            <constraint firstItem="qzv-Gk-ETL" firstAttribute="width" secondItem="svH-Pt-448" secondAttribute="width" multiplier="0.6" id="Trp-No-oxx"/>
-                            <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="K9C-Jp-fWB" secondAttribute="trailing" constant="8" id="aGw-9E-VEy"/>
-                            <constraint firstItem="D9u-gL-X8L" firstAttribute="top" secondItem="qzv-Gk-ETL" secondAttribute="bottom" constant="16" id="azK-f6-7lu"/>
-                            <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="D9u-gL-X8L" secondAttribute="trailing" constant="20" id="eQb-m3-Sc2"/>
-                            <constraint firstItem="Ml7-0x-y6B" firstAttribute="leading" secondItem="qzv-Gk-ETL" secondAttribute="trailing" constant="8" id="xgn-2h-lJy"/>
-                            <constraint firstItem="D9u-gL-X8L" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="20" id="yA0-EE-rC6"/>
+                            <constraint firstItem="iaT-HW-pGn" firstAttribute="bottom" secondItem="VUw-jc-0yf" secondAttribute="bottom" id="35L-8A-ksh"/>
+                            <constraint firstItem="iaT-HW-pGn" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" id="Kkk-gX-JoD"/>
+                            <constraint firstItem="qzv-Gk-ETL" firstAttribute="width" secondItem="VUw-jc-0yf" secondAttribute="width" multiplier="0.55" id="Muh-D4-Dcy"/>
+                            <constraint firstItem="iaT-HW-pGn" firstAttribute="top" secondItem="VUw-jc-0yf" secondAttribute="top" id="QEM-dq-Izx"/>
+                            <constraint firstItem="iaT-HW-pGn" firstAttribute="trailing" secondItem="VUw-jc-0yf" secondAttribute="trailing" id="XK0-0K-Bjr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VUw-jc-0yf"/>
                     </view>
@@ -93,7 +168,7 @@ Your body fat is a bit low; make sure to eat plenty of healthy fats - avocado, f
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="708.69565217391312" y="128.57142857142856"/>
+            <point key="canvasLocation" x="708" y="128.18590704647679"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
@@ -463,7 +538,7 @@ Your body fat is a bit low; make sure to eat plenty of healthy fats - avocado, f
                                         <rect key="frame" x="0.0" y="616" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OV0-qE-psY" id="vpU-aJ-M2x">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="157.85 pounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cVo-tl-Ude">
@@ -487,7 +562,7 @@ Your body fat is a bit low; make sure to eat plenty of healthy fats - avocado, f
                                         <rect key="frame" x="0.0" y="660" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5og-fj-crC" id="nTk-RG-dRv">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="158.73 pounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jlc-Co-SNb">
@@ -511,7 +586,7 @@ Your body fat is a bit low; make sure to eat plenty of healthy fats - avocado, f
                                         <rect key="frame" x="0.0" y="704" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9ra-jB-R9V" id="Cgk-uK-2nE">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="156.53 pounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5ko-3O-SWT">
@@ -535,7 +610,7 @@ Your body fat is a bit low; make sure to eat plenty of healthy fats - avocado, f
                                         <rect key="frame" x="0.0" y="748" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ulV-fD-MBU" id="LRI-ke-DP0">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="157.41 pounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yU0-bR-lpY">
@@ -559,7 +634,7 @@ Your body fat is a bit low; make sure to eat plenty of healthy fats - avocado, f
                                         <rect key="frame" x="0.0" y="792" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2sz-R3-wMi" id="PE4-se-GEe">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="155.65 pounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q7Y-2x-ke7">
@@ -583,7 +658,7 @@ Your body fat is a bit low; make sure to eat plenty of healthy fats - avocado, f
                                         <rect key="frame" x="0.0" y="836" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rcO-wv-MQn" id="NkM-6m-r2W">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="156.09 pounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HxH-ZR-e7P">
@@ -607,7 +682,7 @@ Your body fat is a bit low; make sure to eat plenty of healthy fats - avocado, f
                                         <rect key="frame" x="0.0" y="880" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3z4-kO-mZi" id="Xw9-Z2-wWN">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="155.21 pounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DXV-a5-KKo">
@@ -631,7 +706,7 @@ Your body fat is a bit low; make sure to eat plenty of healthy fats - avocado, f
                                         <rect key="frame" x="0.0" y="924" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yVM-eX-2lj" id="anI-Hz-R7M">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="157.41 pounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uEz-sd-vqs">
@@ -655,7 +730,7 @@ Your body fat is a bit low; make sure to eat plenty of healthy fats - avocado, f
                                         <rect key="frame" x="0.0" y="968" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E2J-3o-41P" id="PTZ-vD-s47">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="155.43 pounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IEj-dm-aCs">
@@ -679,7 +754,7 @@ Your body fat is a bit low; make sure to eat plenty of healthy fats - avocado, f
                                         <rect key="frame" x="0.0" y="1012" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q8r-OQ-Sjm" id="TwS-yU-oLD">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="153.44 pounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Url-uZ-iqe">
@@ -703,7 +778,7 @@ Your body fat is a bit low; make sure to eat plenty of healthy fats - avocado, f
                                         <rect key="frame" x="0.0" y="1056" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JAW-dz-wE7" id="B3K-JR-979">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="154.32 pounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a65-GM-uaS">
@@ -727,7 +802,7 @@ Your body fat is a bit low; make sure to eat plenty of healthy fats - avocado, f
                                         <rect key="frame" x="0.0" y="1100" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GyC-r0-qpz" id="Th6-Se-Gpc">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="155.21 pounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="prO-R3-tFe">
