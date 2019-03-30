@@ -111,10 +111,81 @@ This doesn't include calories you burn from exercising, or just moving around th
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUT-1A-OCE">
                                                 <rect key="frame" x="20" y="219" width="335" height="124"/>
-                                                <string key="text">This weight is in the healthy range for a man your age.
+                                                <string key="text">This weight is in the healthy range for a man your age and height.
 Your body fat is a bit low; make sure to eat plenty of healthy fats - avocado, fish, nuts, eggs.</string>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body Composition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aB7-O8-1D5">
+                                                <rect key="frame" x="20" y="567.5" width="335" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBF-Gp-VzV">
+                                                <rect key="frame" x="20" y="617.5" width="335" height="142.5"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="We estimate that your body is about ">
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="58.6% water">
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name=".AppleSystemUIFontBold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=", which is ">
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="normal">
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name=".AppleSystemUIFontBold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content"> for a male.
+Of your body mass, about </string>
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="4% is bone">
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name=".AppleSystemUIFontBold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=", and ">
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="77% is muscle">
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name=".AppleSystemUIFontBold"/>
+                                                            <font key="NSOriginalFont" size="17" name=".AppleSystemUIFontBold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">.
+These are just estimates - for exact figures, you'd need to speak to a doctor about a more rigorous test.</string>
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -122,22 +193,28 @@ Your body fat is a bit low; make sure to eat plenty of healthy fats - avocado, f
                                         <constraints>
                                             <constraint firstItem="dUT-1A-OCE" firstAttribute="top" secondItem="D9u-gL-X8L" secondAttribute="bottom" constant="8" id="54W-Zw-peW"/>
                                             <constraint firstAttribute="trailing" secondItem="K9C-Jp-fWB" secondAttribute="trailing" constant="8" id="6yD-WP-hYb"/>
+                                            <constraint firstItem="aB7-O8-1D5" firstAttribute="trailing" secondItem="vdp-2U-Jgs" secondAttribute="trailing" id="7Av-wI-TI0"/>
                                             <constraint firstItem="K9C-Jp-fWB" firstAttribute="leading" secondItem="qzv-Gk-ETL" secondAttribute="trailing" constant="6" id="8YR-Yd-jdq"/>
                                             <constraint firstAttribute="trailing" secondItem="D9u-gL-X8L" secondAttribute="trailing" constant="20" id="8zh-mw-C5H"/>
                                             <constraint firstItem="D9u-gL-X8L" firstAttribute="top" secondItem="qzv-Gk-ETL" secondAttribute="bottom" constant="16" id="B2l-w5-SZ0"/>
                                             <constraint firstItem="vdp-2U-Jgs" firstAttribute="leading" secondItem="x90-NH-ana" secondAttribute="leading" id="CkU-NN-XM0"/>
                                             <constraint firstItem="K9C-Jp-fWB" firstAttribute="top" secondItem="qzv-Gk-ETL" secondAttribute="top" constant="22" id="I8S-dF-OTu"/>
                                             <constraint firstItem="x90-NH-ana" firstAttribute="top" secondItem="dUT-1A-OCE" secondAttribute="bottom" constant="16" id="PAI-fJ-rM6"/>
+                                            <constraint firstItem="uBF-Gp-VzV" firstAttribute="leading" secondItem="aB7-O8-1D5" secondAttribute="leading" id="XGF-KU-YOe"/>
+                                            <constraint firstItem="aB7-O8-1D5" firstAttribute="top" secondItem="vdp-2U-Jgs" secondAttribute="bottom" constant="16" id="YA4-Bi-b0R"/>
                                             <constraint firstItem="D9u-gL-X8L" firstAttribute="leading" secondItem="N6r-uc-GrH" secondAttribute="leading" constant="20" id="YKv-9x-lVb"/>
                                             <constraint firstItem="qzv-Gk-ETL" firstAttribute="top" secondItem="N6r-uc-GrH" secondAttribute="top" constant="30" id="YLd-8D-sU0"/>
                                             <constraint firstItem="vdp-2U-Jgs" firstAttribute="top" secondItem="x90-NH-ana" secondAttribute="bottom" constant="8" id="aMY-q9-EBq"/>
+                                            <constraint firstItem="aB7-O8-1D5" firstAttribute="bottom" secondItem="uBF-Gp-VzV" secondAttribute="top" constant="-8" id="aer-oC-L1S"/>
                                             <constraint firstItem="qzv-Gk-ETL" firstAttribute="leading" secondItem="N6r-uc-GrH" secondAttribute="leading" constant="-10" id="cKK-5b-LhF"/>
                                             <constraint firstItem="Ml7-0x-y6B" firstAttribute="top" secondItem="K9C-Jp-fWB" secondAttribute="bottom" constant="6" id="dTg-KC-oaO"/>
+                                            <constraint firstItem="aB7-O8-1D5" firstAttribute="leading" secondItem="vdp-2U-Jgs" secondAttribute="leading" id="eow-YB-Aoi"/>
                                             <constraint firstItem="x90-NH-ana" firstAttribute="leading" secondItem="dUT-1A-OCE" secondAttribute="leading" id="fJY-Oq-yMv"/>
                                             <constraint firstItem="Ml7-0x-y6B" firstAttribute="leading" secondItem="K9C-Jp-fWB" secondAttribute="leading" id="fKf-vP-vMd"/>
                                             <constraint firstItem="dUT-1A-OCE" firstAttribute="leading" secondItem="D9u-gL-X8L" secondAttribute="leading" id="h8i-er-MOz"/>
                                             <constraint firstItem="vdp-2U-Jgs" firstAttribute="trailing" secondItem="x90-NH-ana" secondAttribute="trailing" id="hy5-Wg-Zz2"/>
                                             <constraint firstItem="dUT-1A-OCE" firstAttribute="trailing" secondItem="D9u-gL-X8L" secondAttribute="trailing" id="iYy-vO-q9E"/>
+                                            <constraint firstItem="uBF-Gp-VzV" firstAttribute="trailing" secondItem="aB7-O8-1D5" secondAttribute="trailing" id="tf1-0y-jSm"/>
                                             <constraint firstItem="x90-NH-ana" firstAttribute="trailing" secondItem="dUT-1A-OCE" secondAttribute="trailing" id="xn6-SK-ypO"/>
                                             <constraint firstItem="Ml7-0x-y6B" firstAttribute="trailing" secondItem="K9C-Jp-fWB" secondAttribute="trailing" id="zVK-uj-d3F"/>
                                         </constraints>
