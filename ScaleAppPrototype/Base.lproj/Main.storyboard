@@ -39,7 +39,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6r-uc-GrH">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="776"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WeightGraph" translatesAutoresizingMaskIntoConstraints="NO" id="qzv-Gk-ETL">
                                                 <rect key="frame" x="-10" y="30" width="206.5" height="110"/>
@@ -199,6 +199,7 @@ These are just estimates - for exact figures, you'd need to speak to a doctor ab
                                             <constraint firstItem="D9u-gL-X8L" firstAttribute="top" secondItem="qzv-Gk-ETL" secondAttribute="bottom" constant="16" id="B2l-w5-SZ0"/>
                                             <constraint firstItem="vdp-2U-Jgs" firstAttribute="leading" secondItem="x90-NH-ana" secondAttribute="leading" id="CkU-NN-XM0"/>
                                             <constraint firstItem="K9C-Jp-fWB" firstAttribute="top" secondItem="qzv-Gk-ETL" secondAttribute="top" constant="22" id="I8S-dF-OTu"/>
+                                            <constraint firstAttribute="bottom" secondItem="uBF-Gp-VzV" secondAttribute="bottom" constant="16" id="P3s-Xt-Pxu"/>
                                             <constraint firstItem="x90-NH-ana" firstAttribute="top" secondItem="dUT-1A-OCE" secondAttribute="bottom" constant="16" id="PAI-fJ-rM6"/>
                                             <constraint firstItem="uBF-Gp-VzV" firstAttribute="leading" secondItem="aB7-O8-1D5" secondAttribute="leading" id="XGF-KU-YOe"/>
                                             <constraint firstItem="aB7-O8-1D5" firstAttribute="top" secondItem="vdp-2U-Jgs" secondAttribute="bottom" constant="16" id="YA4-Bi-b0R"/>
@@ -222,7 +223,6 @@ These are just estimates - for exact figures, you'd need to speak to a doctor ab
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="N6r-uc-GrH" secondAttribute="trailing" id="CIT-JU-lrQ"/>
-                                    <constraint firstItem="N6r-uc-GrH" firstAttribute="height" secondItem="iaT-HW-pGn" secondAttribute="height" priority="250" id="Cty-ll-8yZ"/>
                                     <constraint firstItem="N6r-uc-GrH" firstAttribute="leading" secondItem="iaT-HW-pGn" secondAttribute="leading" id="G6Z-5M-csS"/>
                                     <constraint firstItem="N6r-uc-GrH" firstAttribute="width" secondItem="iaT-HW-pGn" secondAttribute="width" id="UU9-aG-tfb"/>
                                     <constraint firstItem="N6r-uc-GrH" firstAttribute="top" secondItem="iaT-HW-pGn" secondAttribute="top" id="bpi-9F-pc2"/>
