@@ -53,7 +53,7 @@ class MasterViewController: UITableViewController {
         super.viewDidLoad()
         self.becomeFirstResponder()
         // Do any additional setup after loading the view.
-//        navigationItem.leftBarButtonItem = editButtonItem
+        navigationItem.leftBarButtonItem = editButtonItem
 
 //        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
 //        navigationItem.rightBarButtonItem = addButton
